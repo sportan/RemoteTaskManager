@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="TaskSystem" value="Remote Task Manager" />
+    <text name="TaskList" value="Service List" />
+    <text name="TaskService" value="Edit Service" />
+    <text name="Xtasks" value="{0} services" />
+    <text name="AllTasks" value="All services" />
+    <text name="ActiveTasks" value="Active services" />
+    <text name="StoppedTasks" value="Stopped services" />
+    <text name="TaskDescription" value="Service description" />
+    <text name="TaskТName" value="Service Name" />
+    <text name="EnterDescriptionHere" value="Service description" />
+    <text name="TaskUpdatedMessage" value="Service has been successfully updated." />
+    
+    <text name="ProcessList" value="Process List" />
+  </texts>
+</localizationDictionary>
