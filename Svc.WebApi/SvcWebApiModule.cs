@@ -2,7 +2,9 @@
 using Abp.Application.Services;
 using Abp.Configuration.Startup;
 using Abp.Modules;
+using Abp.Web;
 using Abp.WebApi;
+using Svc.Tasks;
 
 namespace Svc
 {
@@ -21,7 +23,12 @@ namespace Svc
             //Thus, 'web api layer' is created automatically by ABP.
 
             Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
-                .ForAll<IApplicationService>(Assembly.GetAssembly(typeof (SvcApplicationModule)), "taskmanager")
+                .For<ITaskAppService>("rtm/task")
+                .ForMethod("GetTasksAsync").WithVerb(HttpVerb.Get)
+                .ForMethod("CreateTaskAsync").WithVerb(HttpVerb.Post)
+                .ForMethod("UpdateTaskAsync").WithVerb(HttpVerb.Put)
+                //.ForAll<IApplicationService>(Assembly.GetAssembly(typeof(SvcApplicationModule)), "rtm")
+                //.WithConventionalVerbs()
                 .Build();
         }
     }

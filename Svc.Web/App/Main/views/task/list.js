@@ -1,9 +1,9 @@
 ﻿(function () {
     var app = angular.module('app');
 
-    var controllerId = 'sts.views.task.list';
+    var controllerId = 'rtm.views.task.list';
     app.controller(controllerId, [
-        '$scope', 'abp.services.taskmanager.task',
+        '$scope', 'abp.services.rtm.task',
         function ($scope, taskService) {
             var vm = this;
 
