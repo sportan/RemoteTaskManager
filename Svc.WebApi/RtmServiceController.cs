@@ -18,7 +18,7 @@ namespace Svc{
 
         [HttpGet]
         [Route("list")]
-        public async Task<IHttpActionResult> GetRtmServices(byte? state)
+        public async Task<IHttpActionResult> GetRtmServices(byte? state = null)
         {
             var tasks = await _taskAppService.GetTasksAsync(new GetTasksInput() {State = (TaskState?) state});
             return Ok(tasks);
